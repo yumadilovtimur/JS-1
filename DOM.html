@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HomeWork #1 JS</title>
+</head>
+
+<body>
+
+  <h1>HomeWork #1 JS</h1>
+
+  <script>
+
+    // DOM
+    // 1
+    const newDiv = document.createElement("div");
+    document.body.appendChild(newDiv);
+    newDiv.textContent = "Этот элемент создан при помощи DOM API";
+
+    // 2
+    const secondDiv = document.createElement("div");
+    secondDiv.classList.add("inner");
+    secondDiv.textContent = "Этот элемент тоже создан при помощи DOM API";
+    newDiv.appendChild(secondDiv);
+
+    // 3
+    secondDiv.style.color = "red";
+
+    // 4
+    newDiv.addEventListener("click", function () {
+      console.log("Этот текст говорит о том, что я всё сделал правильно");
+    });
+
+    // 5 
+    const link = document.createElement("a");
+    link.setAttribute("href", "https://loftschool.ru");
+    document.body.appendChild(link);
+    link.textContent = "Ссылка";
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+      console.log("Я кликнул на ссылку " + link.getAttribute("href"));
+    });
+
+    // 6
+    const input = document.createElement("input");
+    const button = document.createElement("button");
+    button.textContent = "Кнопка";
+    document.body.appendChild(input);
+    document.body.appendChild(button);
+
+    button.addEventListener("click", function () {
+      console.log(input.value);
+    });
+
+    // 7
+    const left = document.querySelector("#left");
+    const right = document.querySelector("#right");
+    const items = document.querySelector("#items");
+
+    right.addEventListener("click", function () {
+      if (parseInt(getComputedStyle(items).right) != 500) {
+        items.style.right = parseInt(getComputedStyle(items).right) + 100 + "px";
+      }
+    });
+
+    left.addEventListener("click", function () {
+      if (parseInt(getComputedStyle(items).right) != 0) {
+        items.style.right = parseInt(getComputedStyle(items).right) - 100 + "px";
+      }
+    });
+
+
+  </script>
+
+</body>
+
+</html>

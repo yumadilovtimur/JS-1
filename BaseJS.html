@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HomeWork #1 JS</title>
+</head>
+
+<body>
+
+  <h1>HomeWork #1 JS</h1>
+
+  <script>
+
+    // Задачи по основам JavaScript
+    // 1
+    var name = "Тимур";
+    console.log(name);
+    name = "Петя";
+    console.log(name);
+
+    // 2
+    var n = 5;
+    if (n < 10) {
+      console.log("Lorem");
+    } else {
+      console.log("Ipsum");
+    }
+
+    // 3
+    for (var i = 0; i < 10; i++) {
+      console.log(i);
+    }
+
+    // 4
+    function sum(p1, p2, p3) {
+      var result = p1 + p2 + p3;
+      return result;
+    }
+    var n1 = sum(10, 20, 30);
+    console.log(n1);
+    var n2 = sum(15, 50, 35);
+    console.log(n2);
+
+    // 5
+    var hiLoft = ["Привет", "loftschool"];
+    hiLoft.push(", я изучаю", "JavaScript");
+    console.log(hiLoft.length);
+    for (var i = 0; i < hiLoft.length; i++) {
+      console.log(hiLoft[i]);
+    }
+
+    // 6
+    var randomNumbers = [1, 420, 2, 40, 0, 241, 107, 85, 32, 4];
+    for (var i = 0; i < randomNumbers.length; i++) {
+      if (randomNumbers[i] > 100) {
+        console.log(randomNumbers[i]);
+      }
+    }
+
+    // 7
+    var obj = {
+      name: "Тимур",
+      lastName: "Юмадилов",
+      age: 21
+    }
+    console.log(obj.name);
+    console.log(obj.lastName);
+    console.log(obj.age);
+    obj.school = "LoftSchool";
+    console.log(obj.school);
+
+    // 8
+    function hello(human) {
+      var phrase = "Привет, меня зовут " + human.name + " " + human.lastName + " и мне " + human.age + " год!";
+      return phrase;
+    }
+    var welcome = hello(obj);
+    console.log(welcome);
+
+  </script>
+
+</body>
+
+</html>
